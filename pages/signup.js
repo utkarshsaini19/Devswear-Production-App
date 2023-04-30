@@ -21,7 +21,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const data = { name, email, password }
-        const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/server/pages/api/signup`, {
+        const response = await fetch(`https://devswear-production-app.vercel.app/api/signup`, {
             method: "POST", // or 'PUT'
             headers: {
                 "Content-Type": "application/json",
