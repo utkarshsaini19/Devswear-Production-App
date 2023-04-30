@@ -48,7 +48,7 @@ const Checkout = ({ user, cart, addToCart, clearCart, removeFromCart, subtotal }
                 description: "Your Order",
                 image: "https://example.com/your_logo",
                 order_id: Data.order.id,
-                callback_url: "http://localhost:3000/api/postransaction",
+                callback_url: "https://devswear-production-app.vercel.app/api/postransaction",
                 prefill: {
                     name: "Gaurav Kumar",
                     email: "gaurav.kumar@example.com",
