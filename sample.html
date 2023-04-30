@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card"></div>
+   <script type="application/javascript" crossorigin="anonymous" src="https://securegw-stage.paytm.in/merchantpgpui/checkoutjs/merchants/dummyExampleMIDIdentifier.js" onload="onScriptLoad();"></script>
+ <script>
+   function onScriptLoad(){
+     
+      //Check if CheckoutJS is available
+      if(window.Paytm && window.Paytm.CheckoutJS){
+     
+        //Add callback function to CheckoutJS onLoad function
+        window.Paytm.CheckoutJS.onLoad(function       excecuteAfterCompleteLoad() {
+          //Config
+          var config = {
+            flow:"DEFAULT",
+            hidePaymodeLabel: true,
+            data:{
+              orderId:"orderId",
+              amount: 200,
+              token:"token",
+              tokenType:"TXN_TOKEN"
+            },
+            merchant:{
+              mid:"mid"
+            },
+            handler: {
+              notifyMerchant: function(eventType, data) {
+                console.log("notify merchant called", eventType, data);
+              }
+            }
+          };
+
+          //Create elements instance
+          var elements = window.Paytm.CheckoutJS.elements(config);
+          //Create card element
+          var cardElement = elements.createElement(window.Paytm.CheckoutJS.ELEMENT_PAYMODE.CARD, {root: "#card", style: {bodyBackgroundColor: "blue"}});
+          //Render element
+          cardElement.invoke();
+        });
+      }
+    }
+   </script> 
+</body>
+</html>
