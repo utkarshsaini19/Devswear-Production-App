@@ -7,6 +7,7 @@ Link to the App :- https://devswear-production-app.vercel.app/
 Content:
 
 ```bash
+0. Used Tailwind CSS for Design
 1. Test Razorpay Gateway Integration
 2. Sign Up and Sign In functionality
 3. User can buy clothes according to their sizes and color
