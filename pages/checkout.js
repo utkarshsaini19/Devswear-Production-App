@@ -25,6 +25,34 @@ const Checkout = ({ user, cart, addToCart, clearCart, removeFromCart, subtotal }
         }
     }, [name, address, phone, pincode, city, state])
 
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+
+    const fetchData = async () => {
+        const token = localStorage.getItem('token')
+        const data = { token }
+        const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getUser`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+        const res = await response.json();
+        setName(res.user.name)
+        setAddress(res.user.address)
+        setPhone(res.user.phone)
+        setPincode(res.user.pincode)
+        const Data = await fetch('/api/pincode');
+        const pins = await Data.json();
+        if (Object.keys(pins).includes(res.user.pincode)) {
+            setCity(pins[res.user.pincode][0])
+            setState(pins[res.user.pincode][1])
+        }
+    }
+
 
 
     const checkoutHandler = async () => {
