@@ -1,5 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## In this App
+
+Content:
+
+```bash
+1. Test Razorpay Gateway Integration
+2. Sign Up and Sign In functionality
+3. User can buy clothes according to their sizes and color
+4. Used Context API for Global State Management
+5. Implemented Cart Functionality
+6. Had a separate admin panel can access via /admin link.
+7. Using tailblocks tempalates for Creating Website.
+8. User can see orders they have placed.
+9. Used Next JS with Mongoose as Database.
+10. Fetched data using getServerSideProps as Data Rendering Strategy.
+
+```
+
 ## Getting Started
 
 First, run the development server:
