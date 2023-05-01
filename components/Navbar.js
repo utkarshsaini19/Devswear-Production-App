@@ -47,8 +47,8 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subt
                 <ul className='flex space-x-2 font-bold md:text-md'>
                     <Link legacyBehavior href='/tshirts'><a><li>Tshirts</li></a></Link>
                     <Link legacyBehavior href='hoodies'><a><li>Hoodies</li></a></Link>
-                    <Link legacyBehavior href='/stickers'><a><li>Stickers</li></a></Link>
-                    <Link legacyBehavior href='/mugs'><a><li>Mugs</li></a></Link>
+                    {/* <Link legacyBehavior href='/stickers'><a><li>Stickers</li></a></Link>
+                    <Link legacyBehavior href='/mugs'><a><li>Mugs</li></a></Link> */}
                 </ul>
             </div>
             <div className="cart mx-3 my-2 cursor-pointer flex items-center">
