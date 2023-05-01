@@ -13,7 +13,7 @@ Content:
 4. Used Context API for Global State Management
 5. Implemented Cart Functionality
 6. Had a separate admin panel can access via /admin link.
-7. Using tailblocks tempalates for Creating Website.
+7. Using tailblocks tempalates and modified them according to the Website.
 8. User can see orders they have placed.
 9. Used Next JS with Mongoose as Database.
 10. Fetched data using getServerSideProps as Data Rendering Strategy.
